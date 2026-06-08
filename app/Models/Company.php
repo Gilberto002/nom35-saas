@@ -6,28 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Company extends Model
 {
-
     protected $fillable = [
-        'name',
-        'email',
-        'phone',
-        'rfc',
-        'address',
-        'active',
-        'logo',
-        'industry',
-        'employee_count',
-        'last_activity_at'
+        'name', 'rfc', 'email', 'phone', 'address', 'active',
+        'stripe_customer_id', 'logo', 'industry', 'employee_count'
     ];
 
-    public function employees()
-    {
-        return $this->hasMany(Employee::class);
-    }
+    protected $casts = [
+        'active' => 'boolean',
+        'employee_count' => 'integer',
+    ];
 
-    public function areas()
+    public function subscription()
     {
-        return $this->hasMany(Area::class);
+        return $this->hasOne(Subscription::class)->latestOfMany(); // la más reciente
     }
 
     public function subscriptions()
@@ -35,4 +26,25 @@ class Company extends Model
         return $this->hasMany(Subscription::class);
     }
 
+    public function plan()
+    {
+        return $this->hasOneThrough(Plan::class, Subscription::class)
+                    ->latestOfMany('subscriptions.created_at'); // o usa el helper abajo
+    }
+
+    // Accesores útiles para el frontend
+    public function getCurrentPlanAttribute()
+    {
+        return $this->subscription?->plan;
+    }
+
+    public function getStatusAttribute()
+    {
+        return $this->subscription?->status ?? 'inactive';
+    }
+
+    public function getExpiresAtAttribute()
+    {
+        return $this->subscription?->current_period_end?->format('d/m/Y');
+    }
 }

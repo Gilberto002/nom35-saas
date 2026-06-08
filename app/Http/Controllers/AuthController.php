@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+    private const TRIAL_DAYS = 3;
 
     public function login(Request $request)
 {
@@ -116,9 +117,9 @@ class AuthController extends Controller
         'company_id' => $company->id,
         'plan_id' => $request->plan_id,
         'status' => 'trial',
-        'trial_ends_at' => now()->addDays(30),
+        'trial_ends_at' => now()->addDays(self::TRIAL_DAYS),
         'current_period_start' => now(),
-        'current_period_end' => now()->addDays(30),
+        'current_period_end' => now()->addDays(self::TRIAL_DAYS),
     ]);
 
     Auth::login($user);

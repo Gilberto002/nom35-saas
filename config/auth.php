@@ -7,32 +7,32 @@ return [
         'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
     ],
 
-    'guards' => [
-        'web' => [
-            'driver'   => 'session',
-            'provider' => 'users',
-        ],
+   'guards' => [
+    'web' => [
+        'driver'   => 'session',
+        'provider' => 'users',
+    ],
+    'admin' => [
+        'driver'   => 'session',
+        'provider' => 'admin_users',
+    ],
+    'admin-api' => [          // ← AGREGAR
+        'driver'   => 'sanctum',
+        'provider' => 'admin_users',
+    ],
+],
 
-        // ← Guard para Super Admin vía Sanctum
-        'admin-api' => [
-            'driver'   => 'sanctum',
-            'provider' => 'admin_users',
-        ],
+'providers' => [
+    'users' => [
+        'driver' => 'eloquent',
+        'model'  => App\Models\User::class,
     ],
 
-    'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model'  => env('AUTH_MODEL', App\Models\User::class),
-        ],
-
-        // ← Provider para AdminUser
-        'admin_users' => [
-            'driver' => 'eloquent',
-            'model'  => App\Models\AdminUser::class,
-        ],
+    'admin_users' => [
+        'driver' => 'eloquent',
+        'model'  => App\Models\AdminUser::class,
     ],
-
+],
     'passwords' => [
         'users' => [
             'provider' => 'users',

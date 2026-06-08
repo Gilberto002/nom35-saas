@@ -455,13 +455,13 @@ nav {
 <div class="ticker">
   <div class="ticker-track">
     <span class="ticker-item">NOM-035-STPS-2018</span>
-    <span class="ticker-item">30 días gratis</span>
+    <span class="ticker-item">3 días gratis</span>
     <span class="ticker-item">Sin tarjeta de crédito</span>
     <span class="ticker-item">Cumplimiento normativo</span>
     <span class="ticker-item">Plataforma certificada</span>
     <span class="ticker-item">+500 empresas activas</span>
     <span class="ticker-item">NOM-035-STPS-2018</span>
-    <span class="ticker-item">30 días gratis</span>
+    <span class="ticker-item">3 días gratis</span>
     <span class="ticker-item">Sin tarjeta de crédito</span>
     <span class="ticker-item">Cumplimiento normativo</span>
     <span class="ticker-item">Plataforma certificada</span>
@@ -504,7 +504,7 @@ nav {
   <div class="stage-head">
     <p class="eyebrow">Paso 1 de 3</p>
     <h1 class="ob-title">ELIGE TU<br><span class="outline">PLAN</span></h1>
-    <p class="ob-subtitle">30 días gratis en cualquier plan. Sin tarjeta de crédito.</p>
+    <p class="ob-subtitle">3 días gratis en cualquier plan. Sin tarjeta de crédito.</p>
   </div>
 
   <div class="billing-toggle">
@@ -527,7 +527,7 @@ nav {
       <circle cx="8" cy="8" r="6.5" stroke-width="1.3"/>
       <path d="M8 5v4M8 11h.01" stroke-width="1.4" stroke-linecap="round"/>
     </svg>
-    Todos los planes incluyen <strong style="margin-left:4px">30 días de prueba gratuita</strong>. Cancela cuando quieras.
+    Todos los planes incluyen <strong style="margin-left:4px">3 días de prueba gratuita</strong>. Cancela cuando quieras.
   </div>
 
   <div class="ob-foot">
@@ -644,7 +644,7 @@ nav {
       <div class="pr-info">
         <div class="pr-dot"></div>
         <div>
-          <p class="pr-title" id="pr-title">Plan Profesional — 30 días gratis</p>
+          <p class="pr-title" id="pr-title">Plan Profesional — 3 días gratis</p>
           <p class="pr-sub" id="pr-sub">Luego $1,299 MXN/mes · Cancela cuando quieras</p>
         </div>
       </div>
@@ -690,7 +690,7 @@ nav {
     <p class="eyebrow" style="text-align:center">¡Todo listo!</p>
     <h1 class="ob-title" style="text-align:center">CUENTA<br><span class="outline">CREADA</span></h1>
     <p class="success-sub" id="success-sub">
-      Bienvenido a NOM-035 SaaS. Tu período de prueba de 30 días ha comenzado.
+      Bienvenido a NOM-035 SaaS. Tu período de prueba de 3 días ha comenzado.
     </p>
     <div class="summary-grid">
       <div class="summary-item">
@@ -818,7 +818,7 @@ function selectPlan(id) {
   document.getElementById('step0-next').disabled = false;
   // Update reminder
   const p = plans.find(x => x.id === id);
-  document.getElementById('pr-title').textContent = `Plan ${p.name} — 30 días gratis`;
+  document.getElementById('pr-title').textContent = `Plan ${p.name} — 3 días gratis`;
   document.getElementById('pr-sub').textContent = `Luego $${p.price} MXN/mes · Cancela cuando quieras`;
 }
 
@@ -892,10 +892,10 @@ function submitForm() {
   const email = document.getElementById('admin_email').value || '—';
   const company = document.getElementById('company_name').value || '—';
   const p = plans.find(x => x.id === selectedPlan) || plans[1];
-  const trial = new Date(); trial.setDate(trial.getDate()+30);
+  const trial = new Date(); trial.setDate(trial.getDate()+3);
   const trialStr = trial.toLocaleDateString('es-MX',{day:'2-digit',month:'long',year:'numeric'});
   document.getElementById('success-sub').innerHTML =
-    `Bienvenido a NOM-035 SaaS, <strong>${name}</strong>.<br>Tu período de prueba de 30 días ha comenzado.`;
+    `Bienvenido a NOM-035 SaaS, <strong>${name}</strong>.<br>Tu período de prueba de 3 días ha comenzado.`;
   document.getElementById('s-company').textContent = company;
   document.getElementById('s-plan').textContent = p.name;
   document.getElementById('s-trial').textContent = trialStr;

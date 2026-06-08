@@ -40,12 +40,20 @@ class AdminAuthController extends Controller
 
     public function logout(Request $request)
     {
-        $request->user('admin')?->currentAccessToken()?->delete();
+        $request->user('admin-api')?->currentAccessToken()?->delete();
         return response()->json(['message' => 'Sesión cerrada']);
     }
 
     public function me(Request $request)
     {
-        return response()->json($request->user('admin'));
+        $admin = $request->user('admin-api');
+
+        if (!$admin) {
+            return response()->json(['message' => 'No autenticado'], 401);
+        }
+
+        return response()->json(
+            $admin->only('id', 'name', 'email', 'role')
+        );
     }
 }
