@@ -10,7 +10,7 @@ class EnsureSuperAdmin
 {
     public function handle(Request $request, Closure $next)
     {
-        $admin = $request->user('admin');
+        $admin = $request->user('admin-api');
 
         if (!$admin) {
             return response()->json(['message' => 'No autenticado'], 401);

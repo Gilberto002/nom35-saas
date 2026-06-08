@@ -148,7 +148,7 @@
 
           <div class="login-form-bottom">
             ¿Tu empresa aún no tiene cuenta?
-            <a href="/register" class="login-register-link">Comenzar 30 días gratis →</a>
+            <a href="/register" class="login-register-link">Comenzar 3 días gratis →</a>
           </div>
 
         </div>

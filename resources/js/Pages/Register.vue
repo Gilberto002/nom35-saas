@@ -6,7 +6,7 @@
       <div class="ob-ticker-track">
         <span v-for="i in 3" :key="i" class="ob-ticker-inner">
           <span class="ob-ticker-item">NOM-035-STPS-2018</span>
-          <span class="ob-ticker-item">30 días gratis</span>
+          <span class="ob-ticker-item">3 días gratis</span>
           <span class="ob-ticker-item">Sin tarjeta de crédito</span>
           <span class="ob-ticker-item">Cumplimiento normativo</span>
           <span class="ob-ticker-item">Plataforma certificada</span>
@@ -57,7 +57,7 @@
       <div class="ob-stage-head">
         <p class="ob-eyebrow">Paso 1 de 3</p>
         <h1 class="ob-title">ELIGE TU<br><span class="ob-title-outline">PLAN</span></h1>
-        <p class="ob-subtitle">30 días gratis en cualquier plan. Sin tarjeta de crédito.</p>
+        <p class="ob-subtitle">3 días gratis en cualquier plan. Sin tarjeta de crédito.</p>
       </div>
 
       <!-- Toggle mensual/anual -->
@@ -120,7 +120,7 @@
 
       <div class="ob-trial-strip">
         <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v4M8 11h.01" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-        Todos los planes incluyen <strong>30 días de prueba gratuita</strong>. Cancela cuando quieras.
+        Todos los planes incluyen <strong>3 días de prueba gratuita</strong>. Cancela cuando quieras.
       </div>
 
       <div class="ob-foot">
@@ -246,7 +246,7 @@
           <div class="ob-pr-info">
             <div class="ob-pr-dot"></div>
             <div>
-              <p class="ob-pr-title">Plan {{ selectedPlanData?.name }} — 30 días gratis</p>
+              <p class="ob-pr-title">Plan {{ selectedPlanData?.name }} — 3 días gratis</p>
               <p class="ob-pr-sub">Luego ${{ selectedPlanData?.price }} MXN/mes · Cancela cuando quieras</p>
             </div>
           </div>
@@ -297,7 +297,7 @@
         <h1 class="ob-title" style="text-align:center">CUENTA<br><span class="ob-title-outline">CREADA</span></h1>
         <p class="ob-success-sub">
           Bienvenido a NOM-035 SaaS, <strong>{{ form.admin_name }}</strong>.<br>
-          Tu período de prueba de 30 días ha comenzado.
+          Tu período de prueba de 3 días ha comenzado.
         </p>
 
         <!-- Summary grid -->
@@ -442,7 +442,7 @@ const passwordStrengthLabel = computed(() => {
 
 const trialEndDate = computed(() => {
   const d = new Date()
-  d.setDate(d.getDate() + 30)
+  d.setDate(d.getDate() + 3)
   return d.toLocaleDateString('es-MX', { day: '2-digit', month: 'long', year: 'numeric' })
 })
 
@@ -1001,7 +1001,6 @@ function enterDashboard() {
   .ob-terms { padding: 14px 20px 0; }
 }
 </style>
-
 
 
 

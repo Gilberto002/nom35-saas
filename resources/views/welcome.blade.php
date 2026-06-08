@@ -777,7 +777,7 @@
             <span class="ticker-item">Bienestar laboral</span>
             <span class="ticker-item">Factores de riesgo psicosocial</span>
             <span class="ticker-item">Evaluación certificada</span>
-            <span class="ticker-item">30 días gratis</span>
+            <span class="ticker-item">3 días gratis</span>
             <span class="ticker-item">+500 empresas confían en nosotros</span>
             @endforeach
         </div>
@@ -818,7 +818,7 @@
             </p>
             <div class="hero-ctas">
                 <a href="{{ route('register') }}" class="btn-hero-primary">
-                    Comenzar 30 días gratis
+                    Comenzar 3 días gratis
                     <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
                 <a href="#como-funciona" class="btn-hero-secondary">Ver cómo funciona</a>
@@ -891,7 +891,7 @@
             <span class="stat-lbl">Cumplimiento STPS</span>
         </div>
         <div class="stat-block reveal reveal-delay-3">
-            <span class="stat-num">30 días</span>
+            <span class="stat-num">3 días</span>
             <span class="stat-lbl">Prueba gratis</span>
         </div>
     </div>
@@ -952,7 +952,7 @@
                 Sin Excel. Sin papeles. Sin complicaciones.
             </p>
             <a href="{{ route('register') }}" class="btn-solid" style="width:fit-content; display:inline-block;">
-                Probar gratis 30 días
+                Probar gratis 3 días
             </a>
         </div>
         <div class="features-right">
@@ -1011,7 +1011,7 @@
                     <li class="plan-feat"><span class="plan-feat-x">✗</span> <span style="opacity:.4">Acceso API</span></li>
                 </ul>
                 <a href="{{ route('register') }}" class="plan-cta">Comenzar gratis</a>
-                <div class="plan-trial">30 días gratis · Sin tarjeta</div>
+                <div class="plan-trial">3 días gratis · Sin tarjeta</div>
             </div>
             <!-- Profesional -->
             <div class="plan-col plan-featured reveal reveal-delay-1">
@@ -1030,7 +1030,7 @@
                     <li class="plan-feat"><span class="plan-feat-x">✗</span> <span style="opacity:.4">Acceso API</span></li>
                 </ul>
                 <a href="{{ route('register') }}" class="plan-cta">Comenzar gratis</a>
-                <div class="plan-trial" style="color:rgba(255,255,255,0.35)">30 días gratis · Sin tarjeta</div>
+                <div class="plan-trial" style="color:rgba(255,255,255,0.35)">3 días gratis · Sin tarjeta</div>
             </div>
             <!-- Empresarial -->
             <div class="plan-col reveal reveal-delay-2">
@@ -1048,7 +1048,7 @@
                     <li class="plan-feat"><span class="plan-feat-check">✓</span> Gestor dedicado</li>
                 </ul>
                 <a href="{{ route('register') }}" class="plan-cta">Comenzar gratis</a>
-                <div class="plan-trial">30 días gratis · Sin tarjeta</div>
+                <div class="plan-trial">3 días gratis · Sin tarjeta</div>
             </div>
         </div>
     </section>
@@ -1063,7 +1063,7 @@
         <div class="big-cta-right reveal reveal-delay-1">
             <a href="{{ route('register') }}" class="btn-big-white">Crear cuenta gratis →</a>
             <a href="{{ route('login') }}" class="btn-big-ghost">Ya tengo cuenta</a>
-            <div class="big-cta-note">30 días gratis · Sin tarjeta · Cancela cuando quieras</div>
+            <div class="big-cta-note">3 días gratis · Sin tarjeta · Cancela cuando quieras</div>
         </div>
     </section>
 

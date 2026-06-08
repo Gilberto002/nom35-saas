@@ -310,7 +310,7 @@
                 <div class="mf-field">
                   <label>Estado</label>
                   <select v-model="companyForm.status" class="mf-select">
-                    <option value="trial">Prueba (30 días)</option>
+                    <option value="trial">Prueba (3 días)</option>
                     <option value="active">Activa</option>
                     <option value="suspended">Suspendida</option>
                   </select>
@@ -823,4 +823,3 @@ onMounted(() => {
   .mf-row { grid-template-columns: 1fr; }
 }
 </style>
-

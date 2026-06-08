@@ -276,7 +276,7 @@ const isPastDue   = computed(() => props.subscription?.status === 'past_due')
 const isCancelled = computed(() => props.subscription?.status === 'cancelled')
 
 const trialDaysLeft = computed(() => {
-  if (!props.subscription?.trial_ends_at) return 28
+  if (!props.subscription?.trial_ends_at) return 3
   const diff = new Date(props.subscription.trial_ends_at) - new Date()
   return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)))
 })
@@ -600,4 +600,3 @@ function showToast(message, type = 'success') {
   .plans-row { grid-template-columns: 1fr; }
 }
 </style>
-
